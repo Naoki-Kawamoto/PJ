@@ -1,0 +1,195 @@
+/*テーブルを親要素の幅いっぱいに伸ばす*/
+.table-res-form tr, th, td {
+    width: 100%;
+    border: 1px #DDD solid;
+}
+/*一行ごとに上ボーダー*
+.table-res-form tr {
+    border-top: 1px #DDD solid;
+}
+/*一番上の行だけボーダーなし*
+.table-res-form tr:first-child {
+    border-top: none;
+}
+/*奇数行だけ背景色つける*/
+.table-res-form tr:nth-child(2n+1) {
+    background: #eee;
+}
+/*thとtd内の余白指定*/
+.table-res-form th, .table-res-form td {
+    padding: 1em;
+}
+/*th（項目欄）は30%幅、テキストを右寄せ*/
+.table-res-form th {
+    width: 20%;
+    text-align: left;
+}
+.table-res-form td {
+    width: 25%;
+    text-align: left;
+}
+
+
+/*ここから768px以下の指定*/
+
+@media only screen and (max-width: 768px) {
+/*thとtdをブロック化して幅100％にして、縦積み*/
+    .table-res-form th, .table-res-form td {
+        width: 100%;
+        display: block;
+    }
+/*th（項目名）欄の不要な余白削除・テキスト左寄せ*/
+    .table-res-form th {
+        padding-bottom: 0;
+        text-align: left;
+    }
+
+}
+
+/*ここまで768px以下の指定---終わり*/
+
+/*ここから入力欄のスタイル指定*/
+h2{
+  font-size: 26px;
+  display: inline;
+}
+
+/*各入力フォームスタイリング*/
+input[type="text"], textarea {
+    border: 1px #89BDDE solid;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    width: 50%;
+}
+
+.table-res-form input[type="number"], textarea {
+    border: 1px #89BDDE solid;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    width: 50%;
+}
+
+.table-res-form input[type="radio"], textarea {
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    width: 25%;
+}
+
+.table-res-form select, textarea {
+    border: 1px #89BDDE solid;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    width: 50%;
+}
+
+
+/*入力欄にフォーカスしたら変化*/
+.table-res-form input[type="text"]:focus, textarea:focus{
+    background: #EEFFFF;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.table-res-form input[type="number"]:focus, textarea:focus{
+    background: #EEFFFF;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+/*送信ボタンスタイリング*/
+ .submit_button{
+    appearance: none;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+}
+
+.submit_button{
+  position: relative;
+  display: block;
+  padding: 1em 2em 1em 1em;
+  width: 175px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+    line-height: 1;
+  background: ##87ceeb;
+  background: linear-gradient(to right, #4169e1, #00bfff);
+  text-indent: 0.1em;
+  letter-spacing: 0.1em;
+  border-radius: 1em;
+}
+
+.submit_button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.5em;
+  margin: auto;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  transform: rotate(45deg);
+  transition: right 0.5s;
+}
+
+button:hover:after{
+  right: 1em;
+}
+
+/*画像認識ボタンスタイリング*/
+
+.camera_button{
+   appearance: none;
+   margin:0;
+   padding: 0;
+   background: none;
+   border: none;
+   border-radius: 0;
+   outline: none;
+}
+
+.camera_button{
+ position: relative;
+ display: inline;
+ padding: 1em 2em 1em 1em;
+ width: 175px;
+ font-size: 14px;
+ color: #fff;
+ text-align: center;
+   line-height: 1;
+ background: #4169e1;
+ background: linear-gradient(to right, #4169e1, #00bfff);
+ text-indent: 0.1em;
+ letter-spacing: 0.1em;
+ border-radius: 1em;
+}
+
+.camera_button:after {
+ content: "";
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ right: 1.5em;
+ margin: auto;
+ display: inline-block;
+ width: 0.5em;
+ height: 0.5em;
+ border-right: 1px solid #fff;
+ border-top: 1px solid #fff;
+ transform: rotate(45deg);
+ transition: right 0.5s;
+}
+
+button:hover:after{
+ right: 1em;
+}
